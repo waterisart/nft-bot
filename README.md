@@ -19,7 +19,7 @@ https://polygonscan.com/token/0x2d266a94469d05c9e06d52a4d0d9c23b157767c2#writeCo
 
 Because the "normal" LINK token on Polygon is an ERC20, and oracles only support the ERC677 version, you will need to convert your LINK tokens here: https://pegswap.chain.link/
 
-Each request to trigger an order will cost 0.005 LINK (to pay our node operators for our real-time feed).
+Each request to trigger an order will cost 0.008 LINK (to pay our node operators for our real-time feed).
 
 ## Tutorial (run locally)
 
