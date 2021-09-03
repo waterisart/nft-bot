@@ -20,7 +20,7 @@ const AGGREGATOR_ABI = [{"inputs":[{"internalType":"address","name":"_gov","type
 const NFT_ABI = [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"baseURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenOfOwnerByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"}];
 const LINK_ABI = [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"},{"name":"_data","type":"bytes"}],"name":"transferAndCall","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_subtractedValue","type":"uint256"}],"name":"decreaseApproval","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_addedValue","type":"uint256"}],"name":"increaseApproval","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"},{"indexed":false,"name":"data","type":"bytes"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Approval","type":"event"}];
 
-let allowedLink = false, selectedProvider = null, eventSubscription = null,
+let allowedLink = false, linkBalanceOk = false, selectedProvider = null, eventSubscription = null,
 	providers = [], web3 = [], openTrades = [], pairs = [], nfts = [], nftsBeingUsed = [], ordersTriggered = [],
 	nftTimelock, tradingContract, aggregatorContract, nftContract1, nftContract2, nftContract3, nftContract4, nftContract5, linkContract;
 
@@ -43,7 +43,7 @@ async function checkLinkAllowance(){
 		const allowance = await linkContract.methods.allowance(process.env.PUBLIC_KEY, process.env.TRADING_ADDRESS).call();
 		if(parseFloat(allowance) > 0){
 			allowedLink = true;
-			console.log("LINK allowance OK.");
+			console.log(`LINK allowance OK.`);
 		}else{
 			console.log("LINK not allowed, approving now.");
 			
@@ -74,6 +74,23 @@ async function checkLinkAllowance(){
 	});
 }
 
+setInterval(checkLinkBalance, 10*60*1000);
+//------------------------------------------------------------------------------------------
+// 3.1 stops spending matic when there is not enough LINK, thus preventing MATIC drainage
+//------------------------------------------------------------------------------------------
+async function checkLinkBalance(){
+	console.log("Checking $LINK balance...");
+	const linkBalance = await linkContract.methods.balanceOf(process.env.PUBLIC_KEY).call();
+	if(linkBalance  > 0.008 * 1e18 ) {
+		console.log(`$LINK balance OK (${(linkBalance/1e18)})`);
+		linkBalanceOk = true;
+	} else {
+		console.log("▞▘▘▘▘▘▘▘▘▘▘▘▘▘▘▘▚");
+		console.log("▖ top up $LINK! ▝");
+		console.log("▚▖▖▖▖▖▖▖▖▖▖▖▖▖▖▖▞");
+		linkBalanceOk = false;
+	}
+}
 // -----------------------------------------
 // 4. WEB3 PROVIDER
 // -----------------------------------------
@@ -144,6 +161,7 @@ const getProvider = (wssId) => {
 					selectProvider(wssId);
 					console.log("Switched to WSS " + WSS_URLS[selectedProvider]);
 					checkLinkAllowance();
+					checkLinkBalance();
 				}else{
 					console.log("No need to switch WSS, already connected to " + WSS_URLS[selectedProvider]);
 				}
@@ -469,7 +487,7 @@ async function refreshOpenTrades(event){
 // ---------------------------------------------
 
 socket.on("prices", async (p) => {
-	if(pairs.length > 0 && allowedLink){
+	if(pairs.length > 0 && allowedLink && linkBalanceOk){
 		for (let i = openTrades.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
 			const temp = openTrades[i];
@@ -511,7 +529,7 @@ socket.on("prices", async (p) => {
 				}
 			}
 
-			if(orderType > 0 && !ordersTriggered.some(e => JSON.stringify(e) === JSON.stringify({trade: t, orderType: orderType}))){
+			if(orderType === 3 && t.positionSizeToken >= (1e18/5) && !ordersTriggered.some(e => JSON.stringify(e) === JSON.stringify({trade: t, orderType: orderType}))){
 				const nft = await selectNft();
 				if(nft === null){ return; }
 
@@ -521,15 +539,23 @@ socket.on("prices", async (p) => {
 				const orderInfo = {nftId: nft.id, trade: t, type: orderType,
 					name: orderType === 1 ? "TP" : orderType === 2 ? "SL" : orderType === 3 ? "LIQ" : "OPEN LIMIT"};
 
-				console.log("Try to trigger (order type: " + orderInfo.name + ", nft id: "+orderInfo.nftId+")");
-
 				const tx = {
 					from: process.env.PUBLIC_KEY,
 				    to : process.env.TRADING_ADDRESS,
 				    data : tradingContract.methods.executeNftOrder(orderType, t.trader, t.pairIndex, t.userTradesIndex, nft.id, nft.type).encodeABI(),
-				    gasPrice: web3[selectedProvider].utils.toHex("20000000000"),
-				    gas: web3[selectedProvider].utils.toHex("2000000")
+				    gasPrice: web3[selectedProvider].utils.toHex(process.env.GAS_PRICE_GWEI*1e9),
+				    gas: web3[selectedProvider].utils.toHex("6400000")
 				};
+
+
+				console.log((new Date).toISOString());
+				console.log("Try to trigger (order type: " + orderInfo.name + ", nft id: "+orderInfo.nftId+")");
+				console.log("=================================================================================");
+				console.log((new Date).toISOString());
+				console.log(`Position size    USD: ${t.positionSizeUsd / 1e18}`);
+				console.log(`Position size GFARM2: ${t.positionSizeToken / 1e18}`);
+				console.log((new Date).toISOString());
+				console.log("=================================================================================");
 
 				web3[selectedProvider].eth.accounts.signTransaction(tx, process.env.PRIVATE_KEY).then(signed => {
 				    web3[selectedProvider].eth.sendSignedTransaction(signed.rawTransaction)
@@ -557,6 +583,8 @@ socket.on("prices", async (p) => {
 				});
 			}
 		}
+	} else {
+		console.log("Watch only mode (0 pairs or link not allowed or link balance insufficient).");	
 	}
 });
 
