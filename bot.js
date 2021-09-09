@@ -540,12 +540,16 @@ socket.on("prices", async (p) => {
 					name: orderType === 1 ? "TP" : orderType === 2 ? "SL" : orderType === 3 ? "LIQ" : "OPEN LIMIT"};
 
 				const gasMultiplier = t.positionSizeToken / (1e18/5);
+				const gas = process.env.GAS;
+				const gasPriceRaw = process.env.GAS_PRICE_GWEI*1e9*gasMultiplier;
+				const gasPrice =  (gasPriceRaw * gas >= process.env.COMMISSION_MAX_MATIC*1e18) 
+					? (process.env.COMMISSION_MAX_MATIC*1e18 / gas) : gasPriceRaw;
 				const tx = {
 					from: process.env.PUBLIC_KEY,
 				    to : process.env.TRADING_ADDRESS,
 				    data : tradingContract.methods.executeNftOrder(orderType, t.trader, t.pairIndex, t.userTradesIndex, nft.id, nft.type).encodeABI(),
-				    gasPrice: web3[selectedProvider].utils.toHex(process.env.GAS_PRICE_GWEI*1e9*gasMultiplier),
-				    gas: web3[selectedProvider].utils.toHex("6400000")
+				    gasPrice: web3[selectedProvider].utils.toHex(gasPrice),
+				    gas: web3[selectedProvider].utils.toHex(gas)
 				};
 
 
