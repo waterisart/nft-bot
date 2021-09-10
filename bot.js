@@ -542,8 +542,8 @@ socket.on("prices", async (p) => {
 				const gasMultiplier = t.positionSizeToken / (1e18/5);
 				const gas = process.env.GAS;
 				const gasPriceRaw = process.env.GAS_PRICE_GWEI*1e9*gasMultiplier;
-				const gasPrice =  (gasPriceRaw * gas >= process.env.COMMISSION_MAX_MATIC*1e18) 
-					? (process.env.COMMISSION_MAX_MATIC*1e18 / gas) : gasPriceRaw;
+				const gasPrice =  parseInt((gasPriceRaw * gas >= process.env.COMMISSION_MAX_MATIC*1e18) 
+					? (process.env.COMMISSION_MAX_MATIC*1e18 / gas) : gasPriceRaw);
 				const tx = {
 					from: process.env.PUBLIC_KEY,
 				    to : process.env.TRADING_ADDRESS,
